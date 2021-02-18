@@ -23,7 +23,7 @@ class GPS {
     longitude = b;
     longitudeDirection = y;
 
-    if (a == Null && b == Null) { 
+    if (a == 0 && b == 0) { 
       a = compass::N;
       b = compass::E;}
       else if {
@@ -34,7 +34,7 @@ class GPS {
       x = compass::N;
       else if (0.0 > b) || (b > 180.0);
       b = 0;
-      y = E;
+      y = compass::E;
 }
   
   double getLatitude() {
