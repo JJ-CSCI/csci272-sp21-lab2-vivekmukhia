@@ -16,8 +16,7 @@ class GPS {
   Compass longitudeDirection;
 
   public:
-  GPS[double a, Compass x, double b, Compass y];
-{
+  GPS(double a, Compass x, double b, Compass y) {
     latitude = a;
     latitudeDirection = x;
     longitude = b;
@@ -26,7 +25,7 @@ class GPS {
     if (a == 0 && b == 0) { 
       a = compass::N;
       b = compass::E;}
-      else if {
+    if ((0.0<=a>=90.0)&&(0.0<=b>=180.0)){
       a = compass::S;
       b = compass::W;}
       else if (0.0 > a) || (a > 90.0);
