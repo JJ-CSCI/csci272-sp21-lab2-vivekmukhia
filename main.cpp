@@ -15,6 +15,12 @@ Compass latitudeDirection;
 double longitude;
 Compass longitudeDirection;
 
+public:
+double getLongtitude;
+Compass getLatitudeDirection(); 
+double getLatitude;
+Compass getLongitudeDirection();
+
 GPS(double a, double b) {
   if (((0.0 <= a) && (a <= 90.0)) && ((0.0 <= b) && (b <= 180.0))){
   latitude = a;
@@ -94,17 +100,12 @@ GPS(double a, Compass c, double b, Compass d) {
   }
 }
 
-double getLatitude(){
-  return latitude };
+{return latitude };
+{return latitudeDirection};
 
-Compass getLatitudeDirection() {
-  return latitudeDirection };
+{return longitude };
 
-double getLongitude() {
-  return longitude };
-
-Compass getLongitudeDirection() {
-  return longitudeDirection };
+{return longitudeDirection };
 
 };
 
